@@ -30,7 +30,7 @@ const form = document.querySelector('#add-cafe-form');
 
 
 //getting data
-db.collection('cafes').where('name','<','d').get().then((snapshot)=>{
+db.collection('cafes').where('city','==','dharamshala').orderBy('name').get().then((snapshot)=>{
    // console.log(snapshot.docs);
    snapshot.docs.forEach(doc=>{
        //console.log(doc.data());
